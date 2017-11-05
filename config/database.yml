@@ -8,10 +8,13 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  host: localhost
+  username: pguser
+  password: 1234
 
 development:
   <<: *default
-  database: database
+  database: svetli2_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
